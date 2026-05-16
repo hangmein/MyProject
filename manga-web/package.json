@@ -1,0 +1,19 @@
+{
+  "name": "manga-web-root",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"cd nodejs && node src/server.js\" \"cd frontend && npm run dev\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "cors": "^2.8.5"
+  }
+}

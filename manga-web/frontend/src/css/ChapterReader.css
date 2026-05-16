@@ -1,0 +1,49 @@
+/* Container bao quanh header */
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out; /* Tạo hiệu ứng trượt mượt */
+  background-color: #1a1a1a; /* Màu nền header của bạn */
+}
+
+/* Khi hiện: nằm ở vị trí cũ */
+.header-container.show {
+  transform: translateY(0);
+}
+
+/* Khi ẩn: trượt lên phía trên 100% chiều cao của chính nó */
+.header-container.hide {
+  transform: translateY(-100%);
+}
+
+/* Đảm bảo nội dung truyện không bị che mất lúc mới load */
+.manga-content {
+  margin-top: 60px; /* Bằng chiều cao của header */
+}
+/* --------------------------------------------------------- */
+.fixed {
+    will-change: transform;
+}
+
+/* Ẩn scrollbar của modal nhưng vẫn cuộn được */
+.overflow-y-auto::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+/* Hiệu ứng mượt cho các nút */
+button:active {
+    scale: 0.9;
+}
+/* --------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+
+/* Sửa lỗi chữ đậm bị lỗi dấu tiếng Việt */
+.font-black, .font-bold {
+    letter-spacing: normal !important;
+    font-weight: 700 !important; /* Đừng dùng 900 cho tiếng Việt */
+}
